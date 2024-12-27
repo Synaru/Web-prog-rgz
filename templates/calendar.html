@@ -1,0 +1,79 @@
+{% block script %}
+<link rel="stylesheet" type="text/css" href={{url_for('static', filename='main.css' )}}>
+<script src="{{url_for('static', filename='main.js')}}"></script>
+{% endblock %}
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      yearChange()
+    });
+  </script>
+{%block main%}
+<div class="widget-wrapper">
+  <div class="widget-header">
+    <div class="header1">{{name}} - Календарь отпусков</div>
+    <div class="button logout" onclick="logout()">Выйти из аккаунта</div>
+  </div>
+  <div class="calendar-container">
+    <div style="margin-bottom: 8px; margin-left: 10px;"><input onchange="yearChange()" type="text" id="yearInput" maxlength="4" pattern="[0-9]{4}" placeholder="Год" value="{{year}}"></div>
+    <div class="months-row">
+      <div class="month-container">
+        <div>Январь</div>
+        <div id="0_weeks">
+          <div class="week-widget" onclick="onWeekClick(1, 2)">
+            01.04-01.05 Робер П.Д.
+          </div>
+        </div>
+      </div>
+      <div class="month-container">
+        <div>Февраль</div>
+        <div id="1_weeks"></div>
+      </div>
+      <div class="month-container">
+        <div>Март</div>
+        <div id="2_weeks"></div>
+      </div>
+      <div class="month-container">
+        <div >Апрель</div>
+        <div id="3_weeks"></div>
+      </div>
+    </div>
+    <div class="months-row">
+      <div class="month-container">
+        <div >Май</div>
+        <div id="4_weeks"></div>
+      </div>
+      <div class="month-container">
+        <div>Июнь</div>
+        <div id="5_weeks"></div>
+      </div>
+      <div class="month-container">
+        <div >Июль</div>
+        <div id="6_weeks"></div>
+      </div>
+      <div class="month-container">
+        <div>Август</div>
+        <div id="7_weeks"></div>
+      </div>
+    </div>
+    <div class="months-row">
+      <div class="month-container">
+        <div >Сентябрь</div>
+        <div id="8_weeks"></div>
+      </div>
+      <div class="month-container">
+        <div >Октябрь</div>
+        <div id="9_weeks"></div>
+      </div>
+      <div class="month-container">
+        <div>Ноябрь</div>
+        <div id="10_weeks"></div>
+      </div>
+      <div class="month-container">
+        <div>Декабрь</div>
+        <div id="11_weeks"></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+{%endblock%}

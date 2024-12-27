@@ -1,0 +1,87 @@
+.widget-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+.widget-header {
+    display: flex;
+    flex-direction: row;
+}
+
+.months-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.calendar-container {
+    width: 900;
+
+}
+
+.month-container {
+    width: 25%;
+    height: 100%;
+    padding: 10px;
+}
+
+.widget-header {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+
+button {
+    background-color: #9ac5d9;
+    cursor: pointer;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #3d7791;
+}
+
+.button.logout {
+    background-color: #f08989;
+    padding: 5px;
+    margin-left: auto;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.button.logout:hover {
+    background-color: #b03838;
+}
+
+.header1 {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.header2 {
+    font-weight: bold;
+}
+
+.week-widget {
+    margin-top: 3px;
+    padding: 3px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.week-widget.free {
+    background-color: #c5dae3;
+
+}
+.week-widget.free:hover {
+    background-color: #728b96;
+
+}
+
+.week-widget.locked {
+    background-color: gray;
+    cursor: default;
+}

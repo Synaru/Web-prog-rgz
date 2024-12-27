@@ -1,0 +1,33 @@
+{% block script %}
+<link rel="stylesheet" type="text/css" href={{url_for('static', filename='main.css' )}}>
+{% endblock %}
+
+{%block main%}
+<div class="widget-wrapper">
+  <div class="widget-header">
+    <div class="header1">Регистрация</div>
+  </div>
+  <div>
+    <form method="post">
+      <div style="padding: 10px;">
+        <label for="name">Имя: </label>
+        <input style="margin-left: auto;" id="name" type="text" name="name">
+      </div>
+      <div style="padding: 10px;">
+        <label for="login">Логин: </label>
+        <input style="margin-left: auto;" id="login" type="text" name="login">
+      </div>
+      <div style="padding: 10px;">
+        <label for="password">Пароль:</label>
+        <input style="margin-left: auto;" id="password" type="password" name="password">
+      </div>
+      <div style="color: red; padding: 10px;">{{error}}</div>
+      <div style="padding: 10px;">
+        <button type="submit">Регистрация</button>
+        <a href="/login">Войти</a>
+      </div>
+    </form>
+  </div>
+
+</div>
+{%endblock%}
